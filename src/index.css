@@ -1,0 +1,96 @@
+/*
+ * ══════════════════════════════════════════════════════
+ * DESIGN TOKENS — Hachimitsu Madre Leônia Blink
+ * Padrão BMK · Design, Conversão & Alta Performance
+ * ══════════════════════════════════════════════════════
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Playfair Display", "Georgia", Cambria, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #3b2011;
+}
+
+body {
+  background-color: #3b2011;
+  color: #FAF3E0;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #3b2011;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5a351d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7a4928;
+}
+
+/* ═══ Efeito Honey Sweep (gradiente animado mel) ═══ */
+@keyframes sweep-honey {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.honey-sweep-glow {
+  background: linear-gradient(
+    90deg,
+    #D4A017 0%,
+    #F5D76E 25%,
+    #FFF8DC 50%,
+    #F5D76E 75%,
+    #D4A017 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: sweep-honey 4s linear infinite;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 10px rgba(212, 160, 23, 0.45));
+}
+
+/* ═══ Efeito de Piscar do Olho do iFood no Hover ═══ */
+@keyframes eye-wink {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.15);
+  }
+}
+
+.group:hover .ifood-wink-eye {
+  animation: eye-wink 0.35s ease-in-out;
+}
+
+/* ═══ Respeitar preferência de movimento reduzido ═══ */
+@media (prefers-reduced-motion: reduce) {
+  .honey-sweep-glow {
+    animation: none;
+  }
+  .group:hover .ifood-wink-eye {
+    animation: none;
+  }
+}
