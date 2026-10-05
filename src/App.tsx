@@ -7,7 +7,6 @@ import {
   ChevronRight,
   MapPin,
   Phone,
-  BookOpen,
   Globe,
   Star,
   Instagram
@@ -155,6 +154,40 @@ const WhatsAppIcon: React.FC<{ className?: string }> = ({ className = "w-5 h-5" 
   </svg>
 );
 
+/* ═══ Ícone Gourmet Cardápio Digital (Cloche de Alta Confeitaria) ═══ */
+const CardapioGourmetIcon: React.FC<{ className?: string }> = ({ className = "h-5 w-5 text-[#F5D76E]" }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={`shrink-0 ${className}`}
+  >
+    {/* Puxador circular superior */}
+    <circle cx="12" cy="4" r="1.5" stroke="currentColor" strokeWidth="1.8" fill="currentColor" fillOpacity="0.25" />
+    <path d="M12 5.5V7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    {/* Cúpula / Tampa da Cloche com preenchimento sutil */}
+    <path
+      d="M3.5 16C4 11 7.6 7 12 7s8 4 8.5 9H3.5Z"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinejoin="round"
+      fill="currentColor"
+      fillOpacity="0.18"
+    />
+    {/* Linha de reflexo dourado */}
+    <path
+      d="M7 12.5C7.8 10.5 9.5 9.4 11.5 9.2"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      strokeLinecap="round"
+      strokeOpacity="0.75"
+    />
+    {/* Prato / Bandeja gourmet */}
+    <path d="M2 19h20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <path d="M5 20.5v1M19 20.5v1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.7" />
+  </svg>
+);
+
   /* ─── Ícones SVG e componentes ─── */
   const getIcon = (iconName: string) => {
     const iconClass = 'h-5 w-5 text-white';
@@ -176,7 +209,7 @@ const WhatsAppIcon: React.FC<{ className?: string }> = ({ className = "w-5 h-5" 
       case 'phone':
         return <Phone className="h-5 w-5 text-white" />;
       case 'cardapio':
-        return <BookOpen className="h-5 w-5 text-[#F5D76E]" />;
+        return <CardapioGourmetIcon className="h-5 w-5 text-[#F5D76E]" />;
       case 'site':
         return <Globe className="h-5 w-5 text-white" />;
       case 'avalie':
