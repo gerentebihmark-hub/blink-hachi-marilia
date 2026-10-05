@@ -1,6 +1,6 @@
 # Segurança e Conformidade — Hachimitsu Marília
 
-Este documento detalha as políticas de privacidade, segurança da informação e conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018) aplicadas à interface de multi-links (Blink) da **Hachimitsu** — unidade Marília, localizada na Av. Jesus Montolar, 1200 – Parque das Indústrias, Marília – SP, inscrita sob o CNPJ nº 20.989.222/0005-10.
+Este documento detalha as políticas de privacidade, segurança da informação e conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018) aplicadas à interface de multi-links (Blink) da **Hachimitsu** (disponível em https://www.hachimitsu.com.br/blinkmarilia) — unidade Marília, localizada na Av. Jesus Montolar, 1200 – Parque das Indústrias, Marília – SP, inscrita sob o CNPJ nº 20.989.222/0005-10.
 
 ## 1. Tratamento de Dados Pessoais (LGPD)
 

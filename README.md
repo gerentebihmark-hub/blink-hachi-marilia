@@ -3,6 +3,10 @@
 Interface de multi-links oficial da unidade **Hachimitsu Marília**.
 Padrão BMK · Design Retangular Moderno · Alta Performance e Conversão.
 
+## Links Oficiais & Produção
+- **Endereço do Blink (Produção):** [https://www.hachimitsu.com.br/blinkmarilia](https://www.hachimitsu.com.br/blinkmarilia)
+- **Site Oficial:** [https://www.hachimitsu.com.br/](https://www.hachimitsu.com.br/)
+
 ## Informações da Unidade
 - **Nome:** Hachimitsu Marília
 - **Endereço:** Av. Jesus Montolar, 1200 – Parque das Indústrias, Marília – SP
@@ -16,6 +20,6 @@ Padrão BMK · Design Retangular Moderno · Alta Performance e Conversão.
 
 ## Comandos de Desenvolvimento
 ```bash
-npm run dev    # Inicia o servidor Vite na porta 3006
-npm run build  # Gera o build de produção na pasta dist
+npm run dev    # Inicia o servidor Vite na porta 3006 (/blinkmarilia/)
+npm run build  # Gera o build de produção na pasta dist com base /blinkmarilia/
 ```

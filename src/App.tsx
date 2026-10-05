@@ -14,9 +14,10 @@ import {
 import { BakeryPattern } from './components/BakeryPattern';
 import { LinkItem, RestaurantInfo } from './types';
 
-// Assets locais da pasta public
-const logoHachimitsu = '/logo.png?v=3';
-const logoRodapeBmk = '/logo-branca-bmk.png';
+// Assets locais da pasta public (compatível com base path /blinkmarilia/)
+const BASE_URL = import.meta.env.BASE_URL;
+const logoHachimitsu = `${BASE_URL}logo.png?v=3`;
+const logoRodapeBmk = `${BASE_URL}logo-branca-bmk.png`;
 
 /* ═══════════════════════════════════════════════════════
  * BLINK — Hachimitsu (Unidade Marília)
@@ -80,7 +81,7 @@ export default function App() {
       id: 'site',
       label: 'Acesse nosso site',
       description: 'Conheça mais sobre o universo Hachimitsu',
-      url: 'https://share.google/lA5x1UMkgpPo9CF5o',
+      url: 'https://www.hachimitsu.com.br/',
       icon: 'site',
       eventKey: 'click_site_oficial'
     }
@@ -110,7 +111,7 @@ export default function App() {
   useEffect(() => {
     const updateFavicon = () => {
       const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const faviconUrl = isDark ? '/hachi abelhasbrancas.webp' : '/hachi abelhas.webp';
+      const faviconUrl = isDark ? `${BASE_URL}hachi abelhasbrancas.webp` : `${BASE_URL}hachi abelhas.webp`;
       
       const link = document.querySelector("link[rel*='icon']") as HTMLLinkElement;
       if (link) {
@@ -234,7 +235,7 @@ const CardapioGourmetIcon: React.FC<{ className?: string }> = ({ className = "h-
   const carouselSlides = [
     {
       id: 1,
-      image: '/bolos.webp',
+      image: `${BASE_URL}bolos.webp`,
       tag: 'BOLOS',
       title: 'BOLOS ARTESANAIS',
       text: 'Receitas nobres e exclusivas Hachimitsu com massas leves e recheios delicados para suas celebrações.',
@@ -242,7 +243,7 @@ const CardapioGourmetIcon: React.FC<{ className?: string }> = ({ className = "h-
     },
     {
       id: 2,
-      image: '/paes.webp',
+      image: `${BASE_URL}paes.webp`,
       tag: 'PÃES',
       title: 'PÃES ESPECIAIS',
       text: 'Fermentação natural lenta, casca dourada e crocante, miolo macio e o verdadeiro sabor da panificação artesanal.',
@@ -250,7 +251,7 @@ const CardapioGourmetIcon: React.FC<{ className?: string }> = ({ className = "h-
     },
     {
       id: 3,
-      image: '/doces.webp',
+      image: `${BASE_URL}doces.webp`,
       tag: 'DOCES',
       title: 'DOCES FINOS',
       text: 'A união perfeita entre a delicadeza oriental e a sofisticação da confeitaria nobre com ingredientes selecionados.',
@@ -258,7 +259,7 @@ const CardapioGourmetIcon: React.FC<{ className?: string }> = ({ className = "h-
     },
     {
       id: 4,
-      image: '/salgados.webp',
+      image: `${BASE_URL}salgados.webp`,
       tag: 'SALGADOS',
       title: 'SALGADOS ARTESANAIS',
       text: 'Croissants amanteigados, folhados crocantes, quiches e salgados nobres preparados diariamente.',
@@ -565,11 +566,11 @@ const CardapioGourmetIcon: React.FC<{ className?: string }> = ({ className = "h-
         {/* ═══ Footer BMK ═══ */}
         <footer className="w-full py-6 text-center mt-4 border-t border-white/10 flex flex-col items-center gap-4">
           <div className="flex gap-4 text-[10px] font-bold text-white/80 uppercase tracking-wider">
-            <a href="/SECURITY_AND_COMPLIANCE.md" target="_blank" className="hover:text-white transition-colors">
+            <a href={`${BASE_URL}SECURITY_AND_COMPLIANCE.md`} target="_blank" className="hover:text-white transition-colors">
               Política de Privacidade
             </a>
             <span className="text-white/20">•</span>
-            <a href="/SECURITY_AND_COMPLIANCE.md" target="_blank" className="hover:text-white transition-colors">
+            <a href={`${BASE_URL}SECURITY_AND_COMPLIANCE.md`} target="_blank" className="hover:text-white transition-colors">
               Termos de Uso
             </a>
           </div>
@@ -626,7 +627,7 @@ const CardapioGourmetIcon: React.FC<{ className?: string }> = ({ className = "h-
             </div>
             <div className="flex gap-2 justify-end">
               <a
-                href="/SECURITY_AND_COMPLIANCE.md"
+                href={`${BASE_URL}SECURITY_AND_COMPLIANCE.md`}
                 target="_blank"
                 className="px-3 py-1.5 text-stone-300 hover:text-white text-[10px] font-bold border border-white/20 rounded-lg hover:bg-white/10 transition-colors"
               >
