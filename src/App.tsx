@@ -17,7 +17,6 @@ import { LinkItem, RestaurantInfo } from './types';
 // Assets locais da pasta public (compatível com base path /blinkmarilia/)
 const BASE_URL = import.meta.env.BASE_URL;
 const logoHachimitsu = `${BASE_URL}logo.png?v=3`;
-const logoRodapeBmk = `${BASE_URL}logo-branca-bmk.png`;
 
 /* ═══════════════════════════════════════════════════════
  * BLINK — Hachimitsu (Unidade Marília)
@@ -572,23 +571,6 @@ const CardapioGourmetIcon: React.FC<{ className?: string }> = ({ className = "h-
             <span className="text-white/20">•</span>
             <a href={`${BASE_URL}SECURITY_AND_COMPLIANCE.md`} target="_blank" className="hover:text-white transition-colors">
               Termos de Uso
-            </a>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <a
-              href="https://bmkdigital.com.br"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="BMK Agência"
-              className="inline-flex items-center justify-center opacity-75 hover:opacity-100 transition-opacity duration-300"
-            >
-              <img
-                src={logoRodapeBmk}
-                alt="BMK Agência"
-                className="h-8 w-auto object-contain"
-                loading="lazy"
-              />
             </a>
           </div>
 
